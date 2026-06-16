@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garantir Vaga — Vendedor 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://static.hotmart.com/css/hotmart-fb.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand: #FF6B00; --brand2: #FF8C00;
+      --dark: #0D0D0D; --dark2: #1A1A1A; --dark3: #242424;
+      --text: #E8E8E8; --muted: #999; --white: #FFFFFF;
+      --green: #22C55E; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .tag {
+      display: inline-block;
+      background: rgba(255,107,0,.15); color: var(--brand);
+      border: 1px solid rgba(255,107,0,.3); border-radius: 100px;
+      padding: 6px 16px; font-size: 13px; font-weight: 600;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+
+    /* ── HEADER ── */
+    .ck-header {
+      background: var(--dark2);
+      border-bottom: 1px solid #2a2a2a;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .ck-header .logo { font-size: 16px; font-weight: 800; color: var(--white); }
+    .ck-header .logo span { color: var(--brand); }
+    .step-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .step { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
+    .step.done { color: var(--green); }
+    .step.active { color: var(--white); font-weight: 600; }
+    .step-num {
+      width: 24px; height: 24px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      background: #2a2a2a; color: #555;
+    }
+    .step.done .step-num { background: var(--green); color: #000; }
+    .step.active .step-num { background: var(--brand); color: var(--white); }
+    .step-divider { width: 32px; height: 1px; background: #2a2a2a; }
+
+    /* ── HERO ── */
+    .ck-hero {
+      padding: 52px 0 40px;
+      text-align: center;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,107,0,.1) 0%, transparent 70%);
+    }
+    .ck-hero .greeting {
+      font-size: 15px; color: #999; margin-bottom: 10px;
+    }
+    .ck-hero .greeting strong { color: var(--brand); }
+    .ck-hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 900; color: var(--white);
+      line-height: 1.1; margin-bottom: 16px;
+    }
+    .ck-hero h1 em { font-style: normal; color: var(--brand); }
+    .ck-hero p { font-size: 16px; color: #999; max-width: 500px; margin: 0 auto; }
+
+    /* ── PRICE SUMMARY ── */
+    .price-summary {
+      background: var(--dark2);
+      border: 1px solid rgba(255,107,0,.25);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .ps-left { }
+    .ps-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .ps-desc { font-size: 13px; color: #777; }
+    .ps-right { text-align: right; }
+    .ps-old { font-size: 13px; color: #555; text-decoration: line-through; }
+    .ps-price { font-size: 36px; font-weight: 900; color: var(--white); line-height: 1; }
+    .ps-price span { font-size: 16px; color: #aaa; font-weight: 600; }
+    .ps-installment { font-size: 13px; color: #888; margin-top: 2px; }
+
+    /* ── HOTMART EMBED ── */
+    .hotmart-embed-wrap {
+      background: var(--dark2);
+      border: 1px solid rgba(255,107,0,.2);
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 8px 0 32px;
+    }
+    .hotmart-embed-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 700px;
+      border: none;
+    }
+    .cta-meta {
+      text-align: center;
+      font-size: 13px; color: #666;
+      display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .cta-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: #222; margin: 48px 0; }
+
+    /* ── TESTIMONIALS ── */
+    .ck-section { margin-bottom: 56px; }
+    .ck-section-title {
+      font-size: 20px; font-weight: 800; color: var(--white);
+      margin-bottom: 24px; text-align: center;
+    }
+    .testi-grid { display: flex; flex-direction: column; gap: 14px; }
+    .testi-card {
+      background: var(--dark2); border: 1px solid #2a2a2a;
+      border-radius: var(--radius); padding: 24px;
+    }
+    .stars { color: #FBBF24; font-size: 15px; margin-bottom: 10px; }
+    .testi-text { font-size: 15px; color: #ccc; line-height: 1.65; margin-bottom: 16px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 14px; color: var(--white); flex-shrink: 0;
+    }
+    .testi-name { font-weight: 700; font-size: 14px; color: var(--white); }
+    .testi-role { font-size: 12px; color: #777; }
+
+    /* ── GUARANTEE ── */
+    .guarantee-block {
+      background: rgba(34,197,94,.06);
+      border: 1px solid rgba(34,197,94,.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;
+    }
+    .gb-icon { font-size: 48px; flex-shrink: 0; }
+    .gb-content h3 { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .gb-content p { font-size: 15px; color: #aaa; line-height: 1.65; }
+
+    /* ── INCLUDES ── */
+    .includes-list { display: flex; flex-direction: column; gap: 10px; }
+    .inc-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 15px; color: #ccc;
+      background: var(--dark2); border: 1px solid #2a2a2a;
+      border-radius: 10px; padding: 14px 16px;
+    }
+    .inc-ok { color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+    /* ── ANCHOR BUTTON ── */
+    .btn-anchor {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: 1px solid #333;
+      border-radius: 100px;
+      padding: 12px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      text-decoration: none;
+      transition: border-color .15s, color .15s;
+    }
+    .btn-anchor:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* ── FOOTER ── */
+    .ck-footer {
+      border-top: 1px solid #1e1e1e;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px; color: #444;
+    }
+
+    @media (max-width: 500px) {
+      .price-summary { flex-direction: column; text-align: center; }
+      .ps-right { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="ck-header">
+  <div class="logo">Vendedor <span>2026</span></div>
+  <div class="step-bar">
+    <div class="step done">
+      <div class="step-num">✓</div>
+      Landing page
+    </div>
+    <div class="step-divider"></div>
+    <div class="step done">
+      <div class="step-num">✓</div>
+      Seus dados
+    </div>
+    <div class="step-divider"></div>
+    <div class="step active">
+      <div class="step-num">3</div>
+      Finalizar compra
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="ck-hero">
+  <div class="container">
+    <p class="greeting">Olá, <strong id="nome-display">!</strong> Você está quase lá 🎉</p>
+    <h1>Garanta sua vaga no<br /><em>Vendedor 2026</em></h1>
+    <p>Oferta especial por tempo limitado. Finalize agora e tenha acesso imediato ao curso.</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- HOTMART EMBED -->
+  <div id="formulario"></div>
+  <div class="cta-meta">
+    <span>🔒 Pagamento seguro via Hotmart</span>
+    <span>⚡ Acesso imediato</span>
+    <span>↩️ 7 dias de garantia</span>
+  </div>
+  <div class="hotmart-embed-wrap">
+    <iframe
+      src="https://pay.hotmart.com/L99156036C?checkoutMode=10&embed=1"
+      allow="payment"
+      title="Checkout Vendedor 2026">
+    </iframe>
+  </div>
+
+  <!-- INCLUDES -->
+  <div class="divider"></div>
+  <div class="ck-section">
+    <div class="ck-section-title">O que está incluso</div>
+    <div class="includes-list">
+      <div class="inc-item"><span class="inc-ok">✓</span> Módulo 1: Relacionamento com o cliente (8 aulas)</div>
+      <div class="inc-item"><span class="inc-ok">✓</span> Módulo 2: Técnicas de venda — BANT, SPIN, AIEDA (8 aulas)</div>
+      <div class="inc-item"><span class="inc-ok">✓</span> Módulo 3: Disciplina, funil e metas (6 aulas)</div>
+      <div class="inc-item"><span class="inc-ok">✓</span> Exercícios práticos para aplicar direto na loja</div>
+      <div class="inc-item"><span class="inc-ok">✓</span> Certificado assinado pela Versa Educação — emitido na hora</div>
+      <div class="inc-item"><span class="inc-ok">✓</span> Acesso vitalício — assista quando e onde quiser</div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="ck-section">
+    <div class="ck-section-title">Quem já fez aprovou</div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Apliquei o SPIN na segunda semana e fechei uma venda que eu teria perdido fácil antes. O módulo de objeções mudou meu jeito de atender completamente."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rodrigo M.</div>
+            <div class="testi-role">Vendedor de eletrodomésticos · SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Antes eu dava desconto toda vez que o cliente reclamava do preço. Agora sei defender o valor e a minha comissão subiu direto. Recomendo pra todo mundo do varejo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Aline F.</div>
+            <div class="testi-role">Consultora de moda · RJ</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Coloquei o certificado no currículo e já na primeira entrevista o gerente comentou. Fui contratado na mesma semana. Valeu cada centavo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">F</div>
+          <div>
+            <div class="testi-name">Felipe S.</div>
+            <div class="testi-role">Vendedor · Recém contratado · MG</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARANTEE -->
+  <div class="ck-section">
+    <div class="guarantee-block">
+      <div class="gb-icon">🛡️</div>
+      <div class="gb-content">
+        <h3>Garantia de 7 dias — sem burocracia</h3>
+        <p>Acesse o curso, assista às aulas. Se por qualquer motivo não ficar satisfeito nos primeiros 7 dias, basta solicitar o reembolso direto na Hotmart e devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracia. O risco é zero.</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  <div style="text-align:center; margin-bottom: 56px;">
+    <a href="#formulario" class="btn-anchor">
+      ↑ Voltar ao formulário de compra
+    </a>
+  </div>
+
+</div>
+
+<footer class="ck-footer">
+  © 2026 Versa Educação · Todos os direitos reservados · Curso disponível na plataforma Hotmart
+</footer>
+
+<script>
+  // Personaliza com nome do lead
+  const nome = localStorage.getItem('lead_nome');
+  if (nome) {
+    document.getElementById('nome-display').textContent = nome + '!';
+  } else {
+    document.querySelector('.greeting').style.display = 'none';
+  }
+</script>
+</body>
+</html>

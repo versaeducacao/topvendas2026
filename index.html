@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendedor 2026 — Venda Mais na Loja</title>
+  <meta name="description" content="Curso online para vendedores do varejo. Aprenda as técnicas que os melhores vendedores usam e bata sua meta todo mês. De R$489 por apenas R$189." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://static.hotmart.com/css/hotmart-fb.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:   #FF6B00;
+      --brand2:  #FF8C00;
+      --dark:    #0D0D0D;
+      --dark2:   #1A1A1A;
+      --dark3:   #242424;
+      --text:    #E8E8E8;
+      --muted:   #999;
+      --white:   #FFFFFF;
+      --green:   #22C55E;
+      --radius:  12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── UTILS ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .tag {
+      display: inline-block;
+      background: rgba(255,107,0,.15);
+      color: var(--brand);
+      border: 1px solid rgba(255,107,0,.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .highlight { color: var(--brand); }
+    .line { width: 60px; height: 4px; background: var(--brand); border-radius: 2px; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--brand);
+      text-align: center;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .02em;
+    }
+    .topbar span { opacity: .85; font-weight: 500; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 0 80px;
+      text-align: center;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,107,0,.12) 0%, transparent 70%);
+    }
+    .hero .tag { margin-bottom: 24px; }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+    .hero h1 em { font-style: normal; color: var(--brand); }
+    .hero p {
+      font-size: clamp(17px, 2.2vw, 20px);
+      color: #bbb;
+      max-width: 640px;
+      margin: 0 auto 40px;
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .hero-badge svg { color: var(--green); flex-shrink: 0; }
+
+    /* ── CTA BUTTON ── */
+    .cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      padding: 20px 48px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: .01em;
+      box-shadow: 0 8px 32px rgba(255,107,0,.35);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,107,0,.5); }
+    .btn-cta:active { transform: translateY(0); }
+    .cta-sub { font-size: 13px; color: #888; }
+    .cta-sub strong { color: var(--green); }
+
+    /* ── PRICE BOX ── */
+    .price-inline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .price-old {
+      font-size: 18px;
+      color: #666;
+      text-decoration: line-through;
+    }
+    .price-new {
+      font-size: clamp(38px, 6vw, 52px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .price-new span { font-size: 22px; font-weight: 600; color: #aaa; }
+    .price-badge {
+      background: var(--green);
+      color: #000;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    /* ── PAIN SECTION ── */
+    .pain {
+      background: var(--dark2);
+      padding: 72px 0;
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .pain h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .pain-card {
+      background: var(--dark3);
+      border: 1px solid #2e2e2e;
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .pain-icon { font-size: 28px; flex-shrink: 0; line-height: 1; }
+    .pain-card p { font-size: 15px; color: #bbb; line-height: 1.5; }
+
+    /* ── FOR WHO ── */
+    .forwho { padding: 80px 0; }
+    .forwho .section-head { text-align: center; margin-bottom: 48px; }
+    .forwho h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .forwho-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .forwho-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--dark2);
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .check { color: var(--green); font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .forwho-item p { font-size: 15px; color: #ccc; }
+
+    /* ── MODULES ── */
+    .modules {
+      background: var(--dark2);
+      padding: 80px 0;
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .modules .section-head { text-align: center; margin-bottom: 56px; }
+    .modules h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .module-list { display: flex; flex-direction: column; gap: 16px; }
+    .module-item {
+      background: var(--dark3);
+      border: 1px solid #2e2e2e;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px;
+    }
+    .module-num {
+      background: rgba(255,107,0,.15);
+      color: var(--brand);
+      border: 1px solid rgba(255,107,0,.3);
+      border-radius: 8px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .module-title { font-size: 18px; font-weight: 700; color: var(--white); }
+    .module-sub { font-size: 14px; color: #888; margin-top: 3px; }
+    .module-lessons {
+      border-top: 1px solid #2e2e2e;
+      padding: 16px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 8px;
+    }
+    .lesson {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #999;
+    }
+    .lesson::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    /* ── TECHNIQUES ── */
+    .techniques { padding: 80px 0; }
+    .techniques .section-head { text-align: center; margin-bottom: 56px; }
+    .techniques h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .tech-card {
+      background: var(--dark2);
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .tech-name {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--brand);
+      margin-bottom: 10px;
+      letter-spacing: .04em;
+    }
+    .tech-desc { font-size: 14px; color: #999; line-height: 1.5; }
+
+    /* ── INSTRUCTOR ── */
+    .instructor {
+      padding: 80px 0;
+      background: var(--dark);
+      border-top: 1px solid #2a2a2a;
+    }
+    .instructor-inner {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .instructor-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(255,107,0,.3);
+      border: 3px solid rgba(255,107,0,.4);
+    }
+    .instructor-content { flex: 1; min-width: 260px; }
+    .instructor-content h2 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .instructor-title {
+      font-size: 14px;
+      color: var(--brand);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .instructor-bio {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .instructor-bio strong { color: var(--white); }
+    .instructor-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .istat-num {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--brand);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .istat-label { font-size: 12px; color: #666; }
+    .versa-badge {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,107,0,.07);
+      border: 1px solid rgba(255,107,0,.25);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .versa-badge-icon { font-size: 32px; flex-shrink: 0; }
+    .versa-badge strong {
+      display: block;
+      font-size: 15px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .versa-badge span { font-size: 14px; color: #888; line-height: 1.5; }
+    @media (max-width: 600px) {
+      .instructor-inner { flex-direction: column; align-items: center; text-align: center; }
+      .instructor-stats { justify-content: center; }
+    }
+
+    /* ── CERTIFICATE ── */
+    .certificate {
+      padding: 80px 0;
+      background: var(--dark2);
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .cert-inner {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .cert-icon { font-size: 80px; line-height: 1; flex-shrink: 0; }
+    .cert-content { flex: 1; min-width: 280px; }
+    .cert-content h2 {
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .cert-content p {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .cert-content p strong { color: var(--white); }
+    .cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cert-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+      color: #ccc;
+    }
+    .cert-check {
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .cert-inner { flex-direction: column; align-items: center; text-align: center; }
+      .cert-list li { text-align: left; }
+    }
+
+    /* ── RESULTS ── */
+    .results {
+      background: linear-gradient(135deg, rgba(255,107,0,.1) 0%, rgba(255,107,0,.03) 100%);
+      border-top: 1px solid rgba(255,107,0,.2);
+      border-bottom: 1px solid rgba(255,107,0,.2);
+      padding: 80px 0;
+    }
+    .results .section-head { text-align: center; margin-bottom: 56px; }
+    .results h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .result-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--radius);
+    }
+    .result-num {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 900;
+      color: var(--brand);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .result-label { font-size: 14px; color: #999; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { padding: 80px 0; }
+    .testimonials .section-head { text-align: center; margin-bottom: 56px; }
+    .testimonials h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .testi-card {
+      background: var(--dark2);
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .stars { color: #FBBF24; font-size: 16px; margin-bottom: 14px; }
+    .testi-text { font-size: 15px; color: #ccc; line-height: 1.6; margin-bottom: 20px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .testi-name { font-weight: 700; font-size: 14px; color: var(--white); }
+    .testi-role { font-size: 13px; color: #777; }
+
+    /* ── GUARANTEE ── */
+    .guarantee {
+      background: var(--dark2);
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 72px 0;
+    }
+    .guarantee-inner {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .guarantee-icon {
+      font-size: 80px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .guarantee h2 {
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .guarantee p { font-size: 16px; color: #aaa; line-height: 1.7; max-width: 540px; }
+
+    /* ── PRICING ── */
+    .pricing { padding: 80px 0; text-align: center; }
+    .pricing .section-head { margin-bottom: 48px; }
+    .pricing h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .price-card {
+      max-width: 460px;
+      margin: 0 auto;
+      background: var(--dark2);
+      border: 1px solid rgba(255,107,0,.35);
+      border-radius: 20px;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,107,0,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .popular-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--brand);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 8px 20px;
+      border-bottom-left-radius: var(--radius);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .price-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .price-desc { font-size: 15px; color: #888; margin-bottom: 28px; }
+    .price-display { margin-bottom: 8px; }
+    .price-display .old { font-size: 16px; color: #555; text-decoration: line-through; margin-bottom: 4px; }
+    .price-display .value {
+      font-size: clamp(52px, 8vw, 72px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 4px;
+    }
+    .price-display .currency { font-size: 22px; font-weight: 700; color: #aaa; }
+    .price-display .amount { font-size: clamp(52px, 8vw, 72px); font-weight: 900; color: var(--white); }
+    .price-installment {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+    .price-installment strong { color: #bbb; }
+    .price-period { font-size: 13px; color: #555; margin-bottom: 28px; }
+    .price-includes {
+      text-align: left;
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .price-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 15px;
+      color: #ccc;
+    }
+    .price-item .ok { color: var(--green); flex-shrink: 0; }
+    .savings {
+      background: rgba(34,197,94,.1);
+      border: 1px solid rgba(34,197,94,.25);
+      border-radius: 10px;
+      padding: 14px 20px;
+      font-size: 14px;
+      color: var(--green);
+      font-weight: 600;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    /* ── FAQ ── */
+    .faq { padding: 80px 0; }
+    .faq .section-head { text-align: center; margin-bottom: 48px; }
+    .faq h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+    }
+    .faq-list { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--dark2);
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 24px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      font-family: inherit;
+    }
+    .faq-q .arrow { color: var(--brand); flex-shrink: 0; font-size: 20px; transition: transform .2s; }
+    .faq-item.open .arrow { transform: rotate(45deg); }
+    .faq-a {
+      display: none;
+      padding: 0 24px 22px;
+      font-size: 15px;
+      color: #999;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      padding: 100px 0;
+      text-align: center;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,107,0,.1) 0%, transparent 70%);
+    }
+    .final-cta h2 {
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .final-cta p { font-size: 18px; color: #999; margin-bottom: 48px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .urgency {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,0,.1);
+      border: 1px solid rgba(255,107,0,.3);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: var(--brand);
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark2);
+      border-top: 1px solid #2a2a2a;
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+    }
+    footer a { color: #666; text-decoration: underline; }
+
+    /* ── STICKY CTA (mobile) ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(13,13,13,.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #2a2a2a;
+      padding: 12px 20px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 100;
+    }
+    @media (max-width: 640px) { .sticky-cta { display: flex; } }
+    .sticky-price { font-size: 18px; font-weight: 800; color: var(--white); }
+    .sticky-price small { font-size: 12px; color: #777; text-decoration: line-through; display: block; font-weight: 400; }
+    .btn-sticky {
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 14px;
+      padding: 14px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── TOGGLE BENEFITS ── */
+    .toggle-section {
+      padding: 72px 0;
+      background: var(--dark);
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .toggle-eyebrow {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 20px;
+    }
+    .toggle-bar {
+      display: flex;
+      background: var(--dark3);
+      border: 1px solid #2e2e2e;
+      border-radius: 100px;
+      padding: 5px;
+      max-width: 420px;
+      margin: 0 auto 48px;
+      gap: 4px;
+    }
+    .toggle-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #666;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+    .toggle-btn.active {
+      background: var(--brand);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(255,107,0,.3);
+    }
+    .toggle-panel { display: block; }
+    .toggle-panel.hidden { display: none; }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .benefit-card {
+      background: var(--dark2);
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: border-color .2s;
+    }
+    .benefit-card:hover { border-color: rgba(255,107,0,.3); }
+    .benefit-icon { font-size: 28px; margin-bottom: 12px; line-height: 1; }
+    .benefit-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .benefit-desc { font-size: 14px; color: #888; line-height: 1.6; }
+    .benefit-desc strong { color: var(--brand); }
+
+    /* ── HIGHLIGHTS ── */
+    .highlights {
+      background: var(--dark3);
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 28px 0;
+    }
+    .hl-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .hl-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 180px;
+      padding: 8px 16px;
+    }
+    .hl-icon { font-size: 28px; line-height: 1; flex-shrink: 0; }
+    .hl-text { display: flex; flex-direction: column; gap: 2px; }
+    .hl-text strong { font-size: 14px; font-weight: 700; color: var(--white); }
+    .hl-text span { font-size: 12px; color: #777; }
+    .hl-sep {
+      width: 1px;
+      height: 40px;
+      background: #2e2e2e;
+      flex-shrink: 0;
+    }
+    @media (max-width: 700px) {
+      .hl-sep { display: none; }
+      .hl-item { min-width: 140px; }
+    }
+
+    /* ── SAMPLE LESSON ── */
+    .sample {
+      padding: 80px 0;
+      background: var(--dark2);
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .sample .section-head { text-align: center; margin-bottom: 40px; }
+    .sample h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .sample-sub { font-size: 17px; color: #999; max-width: 540px; margin: 0 auto; }
+    .video-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(255,107,0,.2);
+      position: relative;
+    }
+    .video-wrap iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+    }
+
+    /* ── POPUP ── */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .popup-overlay.active { display: flex; }
+    .popup-box {
+      background: var(--dark2);
+      border: 1px solid rgba(255,107,0,.3);
+      border-radius: 20px;
+      padding: 48px 40px 40px;
+      max-width: 440px;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      animation: popIn .25s ease;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(.94) translateY(12px); }
+      to   { opacity: 1; transform: scale(1)  translateY(0); }
+    }
+    .popup-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: color .15s;
+    }
+    .popup-close:hover { color: var(--white); }
+    .popup-icon { font-size: 44px; margin-bottom: 16px; }
+    .popup-box h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .popup-box > p {
+      font-size: 15px;
+      color: #999;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .popup-field {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .popup-field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #aaa;
+      margin-bottom: 6px;
+    }
+    .popup-field input {
+      width: 100%;
+      background: var(--dark3);
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 15px;
+      color: var(--white);
+      font-family: inherit;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .popup-field input:focus { border-color: var(--brand); }
+    .popup-field input::placeholder { color: #555; }
+    .popup-privacy {
+      font-size: 12px;
+      color: #555;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 48px 0 60px; }
+      .guarantee-inner { justify-content: center; text-align: center; }
+      .price-card { padding: 36px 24px; }
+      .popup-box { padding: 40px 24px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  🔥 OFERTA ESPECIAL — <strong>5x de R$ 41,00</strong> &nbsp;<span>Acesso imediato · Por tempo limitado</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="tag">Curso Online · Varejo · Certificado</div>
+    <h1>
+      Pare de perder vendas.<br />
+      <em>Bata sua meta todo mês.</em>
+    </h1>
+    <p>
+      O método que os melhores vendedores do varejo usam para criar relacionamento, aplicar técnicas certeiras e fechar mais vendas — sem depender de desconto.
+    </p>
+
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        3 Módulos Completos
+      </div>
+      <div class="hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Acesso Vitalício
+      </div>
+      <div class="hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Certificado Incluso
+      </div>
+      <div class="hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        7 Dias de Garantia
+      </div>
+    </div>
+
+    <div class="price-inline">
+      <div class="price-new"><span>5x de R$</span> 41<span style="font-size:28px;color:#aaa">,00</span></div>
+    </div>
+
+    <div class="cta-wrap">
+      <a onclick="abrirPopup(); return false;" href="#" class="btn-cta">
+        Quero Vender Mais Agora
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <div class="cta-sub"><strong>✓ Acesso imediato</strong> &nbsp;·&nbsp; 7 dias de garantia &nbsp;·&nbsp; Pagamento seguro via Hotmart</div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+  <div class="container">
+    <div class="hl-grid">
+      <div class="hl-item">
+        <div class="hl-icon">💻</div>
+        <div class="hl-text">
+          <strong>Curso 100% Online</strong>
+          <span>Acesse pela tela que preferir</span>
+        </div>
+      </div>
+      <div class="hl-sep"></div>
+      <div class="hl-item">
+        <div class="hl-icon">🕐</div>
+        <div class="hl-text">
+          <strong>Assista onde e quando quiser</strong>
+          <span>No seu ritmo, sem horário fixo</span>
+        </div>
+      </div>
+      <div class="hl-sep"></div>
+      <div class="hl-item">
+        <div class="hl-icon">⚡</div>
+        <div class="hl-text">
+          <strong>Aulas curtas de 5 minutos</strong>
+          <span>Direto ao ponto, sem enrolação</span>
+        </div>
+      </div>
+      <div class="hl-sep"></div>
+      <div class="hl-item">
+        <div class="hl-icon">📄</div>
+        <div class="hl-text">
+          <strong>Deixe seu currículo TOP</strong>
+          <span>Certificado emitido na hora</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOGGLE BENEFITS -->
+<section class="toggle-section">
+  <div class="container">
+    <p class="toggle-eyebrow">Qual é a sua situação?</p>
+    <div class="toggle-bar">
+      <button class="toggle-btn active" onclick="setToggle('vender')">
+        📈 Quero vender mais
+      </button>
+      <button class="toggle-btn" onclick="setToggle('emprego')">
+        💼 Quero um emprego
+      </button>
+    </div>
+
+    <!-- PAINEL: VENDER MAIS -->
+    <div class="toggle-panel" id="panel-vender">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <div class="benefit-title">Bata sua meta todo mês</div>
+          <div class="benefit-desc">Aprenda a organizar sua semana como os vendedores de alta performance — com funil, follow-up e disciplina.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🧠</div>
+          <div class="benefit-title">Técnicas que fecham vendas</div>
+          <div class="benefit-desc">BANT, SPIN e AIEDA: os mesmos métodos usados por times de escritório agora ao alcance do vendedor de loja.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <div class="benefit-title">Drible objeções com confiança</div>
+          <div class="benefit-desc">"Tá caro", "preciso pensar", "vou falar com minha esposa" — você vai saber exatamente o que responder.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💸</div>
+          <div class="benefit-title">Ganhe mais sem dar desconto</div>
+          <div class="benefit-desc">Entenda o valor do seu produto e pare de diminuir a comissão toda vez que o cliente questionar o preço.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📋</div>
+          <div class="benefit-title">Nunca perca um cliente de vista</div>
+          <div class="benefit-desc">Use o funil de vendas para acompanhar cada oportunidade e ser sempre você quem dá o próximo passo.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🚀</div>
+          <div class="benefit-title">Suba de posição na loja</div>
+          <div class="benefit-desc">Quem bate meta com consistência chama atenção. Prepare o terreno para promoções e reconhecimento.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAINEL: EMPREGO -->
+    <div class="toggle-panel hidden" id="panel-emprego">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">📄</div>
+          <div class="benefit-title">Currículo que se destaca</div>
+          <div class="benefit-desc">Candidatos com certificação têm até <strong>80% mais chances</strong> de serem chamados para entrevistas no varejo.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏆</div>
+          <div class="benefit-title">Certificado da Versa Educação</div>
+          <div class="benefit-desc">A Versa é uma das maiores empresas de capacitação profissional para o varejo do Brasil. Um nome que pesa no currículo.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📧</div>
+          <div class="benefit-title">Certificado emitido na hora</div>
+          <div class="benefit-desc">Ao concluir o curso o certificado é emitido na hora — pronto para imprimir, anexar ou postar no LinkedIn.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <div class="benefit-title">Conclua em poucos dias</div>
+          <div class="benefit-desc">Aulas de 5 minutos, objetivas e práticas. Você pode concluir o curso em um final de semana e já chegar na entrevista preparado.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎤</div>
+          <div class="benefit-title">Impressione na entrevista</div>
+          <div class="benefit-desc">Conheça as técnicas de venda que os gerentes esperam que você domine — e fale sobre elas com segurança.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌱</div>
+          <div class="benefit-title">Comece com o pé direito</div>
+          <div class="benefit-desc">Aprenda o jeito certo de vender desde o início. Quem entra qualificado cresce mais rápido e evita os erros que travam a carreira.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SAMPLE LESSON -->
+<section class="sample">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Amostra Gratuita</div>
+      <h2>Assista uma aula antes de comprar</h2>
+      <p class="sample-sub">Veja como o conteúdo é direto ao ponto e aplicável imediatamente no seu dia a dia de vendas.</p>
+    </div>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/ERUffExXSJE"
+        title="Aula amostra — Vendedor 2026"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="container">
+    <h2>Você se identifica com alguma dessas situações?</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">😤</div>
+        <p>O cliente chegou animado, fez perguntas, e foi embora dizendo que "vai pensar" — você nunca mais soube dele.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💸</div>
+        <p>Todo mês você dá desconto para fechar a venda e, mesmo assim, a comissão no final não compensa.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😰</div>
+        <p>Quando o cliente reclama do preço ou pede condição especial, você trava e não sabe o que responder.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📉</div>
+        <p>Você faz muito atendimento mas poucos fechamentos — sente que está trabalhando mais e vendendo menos.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📄</div>
+        <p>Está mandando currículo para vaga no varejo mas não tem nada que comprove que você sabe vender de verdade.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🤷</div>
+        <p>Quer entrar no mercado mas não sabe por onde começar — nem o que estudar para se preparar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="forwho">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Para quem é este curso</div>
+      <h2>Para quem já vende — e para quem quer começar</h2>
+    </div>
+    <div class="forwho-list">
+      <div class="forwho-item">
+        <span class="check">✓</span>
+        <p>Vendedor(a) de loja que quer bater meta todos os meses com consistência</p>
+      </div>
+      <div class="forwho-item">
+        <span class="check">✓</span>
+        <p>Quem está buscando emprego no varejo e quer se destacar na seleção com um certificado no currículo</p>
+      </div>
+      <div class="forwho-item">
+        <span class="check">✓</span>
+        <p>Profissional que já vende bem mas quer ir para outro nível e sair do piloto automático</p>
+      </div>
+      <div class="forwho-item">
+        <span class="check">✓</span>
+        <p>Atendente que quer aprender a transformar todo atendimento em oportunidade de venda</p>
+      </div>
+      <div class="forwho-item">
+        <span class="check">✓</span>
+        <p>Quem está sem emprego e quer usar esse tempo para se qualificar e entrar no mercado mais preparado</p>
+      </div>
+      <div class="forwho-item">
+        <span class="check">✓</span>
+        <p>Supervisor ou gerente que quer capacitar o time e elevar o resultado da loja</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="modules">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Conteúdo do Curso</div>
+      <h2>O que você vai aprender</h2>
+    </div>
+    <div class="module-list">
+
+      <div class="module-item">
+        <div class="module-header">
+          <div class="module-num">01</div>
+          <div>
+            <div class="module-title">Relacionamento — Problema e Solução</div>
+            <div class="module-sub">A base de qualquer venda de sucesso: entender o cliente de verdade</div>
+          </div>
+        </div>
+        <div class="module-lessons">
+          <div class="lesson">Por que ninguém compra produtos</div>
+          <div class="lesson">Por que as empresas existem</div>
+          <div class="lesson">Quem é o seu cliente e o que ele quer</div>
+          <div class="lesson">A jornada do cliente até você</div>
+          <div class="lesson">Como criar relacionamento real</div>
+          <div class="lesson">Expectativas e como alinhá-las</div>
+          <div class="lesson">Concorrência e não-clientes</div>
+          <div class="lesson">Exercício prático de mapeamento</div>
+        </div>
+      </div>
+
+      <div class="module-item">
+        <div class="module-header">
+          <div class="module-num">02</div>
+          <div>
+            <div class="module-title">Técnicas de Venda</div>
+            <div class="module-sub">Métodos testados para conduzir, convencer e fechar</div>
+          </div>
+        </div>
+        <div class="module-lessons">
+          <div class="lesson">BANT — Identifique o cliente certo</div>
+          <div class="lesson">SPIN Selling — O cliente faz a venda</div>
+          <div class="lesson">AIEDA-Z — Passo a passo do fechamento</div>
+          <div class="lesson">Como lidar com objeções de preço</div>
+          <div class="lesson">Como lidar com "preciso pensar"</div>
+          <div class="lesson">Como lidar com objeção de autoridade</div>
+          <div class="lesson">A verdade sobre desconto</div>
+          <div class="lesson">Cross Selling e UpSelling</div>
+        </div>
+      </div>
+
+      <div class="module-item">
+        <div class="module-header">
+          <div class="module-num">03</div>
+          <div>
+            <div class="module-title">Disciplina e Meta</div>
+            <div class="module-sub">O que separa quem bate meta de quem só bate palma</div>
+          </div>
+        </div>
+        <div class="module-lessons">
+          <div class="lesson">O funil de vendas na prática</div>
+          <div class="lesson">Como mover o cliente pelo funil</div>
+          <div class="lesson">Quem controla a venda?</div>
+          <div class="lesson">Como nunca perder o follow-up</div>
+          <div class="lesson">Metas, indicadores e rotina</div>
+          <div class="lesson">O vendedor como profissional ativo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECHNIQUES HIGHLIGHT -->
+<section class="techniques">
+  <div class="container">
+    <div class="section-head" style="text-align:center; margin-bottom:56px;">
+      <div class="tag" id="certificado">Metodologia</div>
+      <h2>As técnicas que os top vendedores usam</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-name">BANT</div>
+        <div class="tech-desc">Descubra em minutos se o cliente tem orçamento, autoridade, necessidade e urgência para comprar.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">SPIN</div>
+        <div class="tech-desc">O cliente mesmo te diz o argumento perfeito para fechar a venda. Você só precisa fazer as perguntas certas.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">AIEDA</div>
+        <div class="tech-desc">Um roteiro completo da abordagem ao fechamento — com estratégia para cada etapa da venda.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">FUNIL</div>
+        <div class="tech-desc">Visualize cada cliente no processo, saiba quem resgatar e garanta que nenhuma oportunidade escapa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATE -->
+<section class="certificate">
+  <div class="container">
+    <div class="cert-inner">
+      <div class="cert-icon">🎓</div>
+      <div class="cert-content">
+        <div class="tag" style="margin-bottom:16px;">Certificado Profissional</div>
+        <h2>Coloque no currículo e abra portas no varejo</h2>
+        <p>Ao concluir o curso, o <strong>certificado de conclusão é emitido na hora</strong>. É a prova concreta de que você se preparou — e que qualquer loja pode verificar.</p>
+        <ul class="cert-list">
+          <li>
+            <span class="cert-check">✓</span>
+            <span>Certificado emitido na hora ao final do curso</span>
+          </li>
+          <li>
+            <span class="cert-check">✓</span>
+            <span>Válido para incluir no currículo e no LinkedIn</span>
+          </li>
+          <li>
+            <span class="cert-check">✓</span>
+            <span>Mostra ao recrutador que você domina técnicas reais de venda</span>
+          </li>
+          <li>
+            <span class="cert-check">✓</span>
+            <span>Diferencial imediato frente a outros candidatos sem qualificação</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results">
+  <div class="container">
+    <div class="section-head" style="text-align:center; margin-bottom:56px;">
+      <div class="tag">Resultados</div>
+      <h2>O que muda depois do curso</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-num">+3x</div>
+        <div class="result-label">mais fechamentos por atendimento</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">0</div>
+        <div class="result-label">descontos desnecessários dados</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">100%</div>
+        <div class="result-label">controle do processo de venda</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">↑</div>
+        <div class="result-label">comissão e posição na loja</div>
+      </div>
+    </div>
+    <div style="text-align:center; max-width:580px; margin:0 auto;">
+      <p style="font-size:17px; color:#bbb; line-height:1.7;">
+        Não é magia. É método. Quando você sabe <strong style="color:var(--white)">por que as pessoas compram</strong>, como criar <strong style="color:var(--white)">relacionamento de verdade</strong> e como conduzir a venda com <strong style="color:var(--white)">técnica e disciplina</strong> — os números mudam.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="instructor">
+  <div class="container">
+    <div class="instructor-inner">
+      <img class="instructor-avatar" src="imagens/foto-gustavo-faria.jpeg" alt="Gustavo Faria" />
+      <div class="instructor-content">
+        <div class="tag" style="margin-bottom:16px;">Quem criou este curso</div>
+        <h2>Gustavo Faria</h2>
+        <p class="instructor-title">Fundador &amp; CEO da Versa Educação · Especialista em Marketing e Vendas</p>
+        <p class="instructor-bio">
+          Empreendedor serial com <strong>mais de R$ 20 milhões faturados</strong> nos últimos anos, Gustavo liderou times de vendas que bateram metas de 8 dígitos. Especialista em levar para o varejo os métodos de vendas que antes eram exclusivos dos grandes times de escritório — e em transformar vendedores comuns em profissionais de alta performance.
+        </p>
+        <div class="instructor-stats">
+          <div class="istat">
+            <div class="istat-num">R$20M+</div>
+            <div class="istat-label">faturados nos últimos anos</div>
+          </div>
+          <div class="istat">
+            <div class="istat-num">8 dígitos</div>
+            <div class="istat-label">em metas lideradas</div>
+          </div>
+          <div class="istat">
+            <div class="istat-num">Varejo</div>
+            <div class="istat-label">especialidade e foco</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="versa-badge">
+      <div class="versa-badge-icon">🏆</div>
+      <div>
+        <strong>Certificado assinado pela Versa Educação</strong>
+        <span>Uma das maiores empresas de capacitação profissional para o varejo do Brasil — emitido na hora ao concluir o curso.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Depoimentos</div>
+      <h2>Quem já aplicou e mudou o jogo</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Eu achei que vender era só ter boa lábia. Aprendi que é sobre ouvir o cliente. Apliquei o SPIN na segunda semana e fechei uma venda que eu teria perdido fácil antes."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rodrigo M.</div>
+            <div class="testi-role">Vendedor de eletrodomésticos · SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"O módulo de objeções mudou tudo pra mim. Antes eu dava desconto toda vez que o cliente reclamava do preço. Agora sei defender o valor e a minha comissão subiu direto."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Aline F.</div>
+            <div class="testi-role">Consultora de moda · RJ</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Estava travado nas vendas há meses. Depois que aprendi o AIEDA-Z e comecei a pegar o contato de quem não fechava na hora, minhas vendas em follow-up triplicaram."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Marcos T.</div>
+            <div class="testi-role">Vendedor de motos · MG</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="container">
+    <div class="guarantee-inner">
+      <div class="guarantee-icon">🛡️</div>
+      <div>
+        <h2>Garantia de 7 dias — sem burocracia</h2>
+        <p>
+          Acesse o curso. Assista às aulas. Aplique as técnicas. Se por qualquer motivo você não ficar satisfeito nos primeiros 7 dias, basta pedir o reembolso direto na Hotmart e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
+        </p>
+        <p style="margin-top:14px;">
+          O risco é <strong style="color:var(--white)">zero</strong>. A oportunidade é real.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="oferta">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Oferta Especial</div>
+      <h2>Invista no seu crescimento hoje</h2>
+    </div>
+    <div class="price-card">
+      <div class="popular-badge">Melhor Oferta</div>
+      <div class="price-title">Vendedor 2026 — Completo</div>
+      <div class="price-desc">Acesso completo a todos os módulos + certificado</div>
+
+      <div class="price-display">
+        <div class="old">De R$ 489,00</div>
+        <div class="value">
+          <span class="currency">5x de R$</span>
+          <span class="amount">41</span>
+        </div>
+      </div>
+      <div class="price-period">sem juros · Acesso vitalício</div>
+
+      <div class="savings">🎉 Você economiza R$ 300,00 — 61% de desconto</div>
+
+      <div class="price-includes">
+        <div class="price-item"><span class="ok">✓</span> Módulo 1: Relacionamento com o cliente (8 aulas)</div>
+        <div class="price-item"><span class="ok">✓</span> Módulo 2: Técnicas de venda — BANT, SPIN, AIEDA (8 aulas)</div>
+        <div class="price-item"><span class="ok">✓</span> Módulo 3: Disciplina, funil e metas (6 aulas)</div>
+        <div class="price-item"><span class="ok">✓</span> Exercícios práticos para aplicar na loja</div>
+        <div class="price-item"><span class="ok">✓</span> Certificado emitido na hora ao concluir</div>
+        <div class="price-item"><span class="ok">✓</span> Acesso vitalício — assista quando quiser</div>
+        <div class="price-item"><span class="ok">✓</span> 7 dias de garantia total</div>
+      </div>
+
+      <div class="cta-wrap">
+        <a onclick="abrirPopup(); return false;" href="#" class="btn-cta" style="width:100%; font-size:17px;">
+          Comprar Agora
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <div class="cta-sub">Pagamento seguro via Hotmart &nbsp;·&nbsp; <strong>Acesso imediato</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Dúvidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Preciso ter experiência com vendas para fazer o curso?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">
+          Não. O curso foi desenvolvido para qualquer nível. Se você está começando agora, vai aprender o jeito certo desde o início. Se já tem experiência, vai descobrir técnicas que organizam e potencializam tudo que você já faz.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          O curso funciona para o segmento que eu trabalho?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">
+          Sim. As técnicas ensinadas (BANT, SPIN, AIEDA) funcionam para qualquer venda no varejo — moda, eletro, móveis, materiais de construção, cosméticos, alimentação e muito mais. A base é o comportamento humano, e isso é igual em qualquer segmento.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Quanto tempo tenho para concluir o curso?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">
+          O acesso é vitalício. Você pode assistir no seu ritmo, no celular ou no computador, e rever as aulas quantas vezes quiser.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Como recebo o certificado?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">
+          Ao concluir o curso e passar no teste final, o certificado de conclusão é emitido automaticamente pela plataforma Hotmart. Você pode baixar, imprimir e usar no currículo.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          E se eu não gostar? Tem garantia?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">
+          Sim. Você tem 7 dias de garantia total após a compra. Basta solicitar o reembolso direto na plataforma Hotmart e o valor é devolvido integralmente, sem burocracia.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Essa promoção vai durar quanto tempo?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">
+          Não temos uma data definida de encerramento, mas o preço de 5x de R$41,00 pode ser alterado a qualquer momento. Se está pensando, o melhor momento para garantir é agora.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="urgency">
+      ⏳ &nbsp;Oferta por tempo limitado — 5x de R$ 41,00
+    </div>
+    <h2>
+      Chega de perder venda<br />
+      por falta de <em style="color:var(--brand)">técnica</em>.
+    </h2>
+    <p>
+      Todo dia que passa sem método é comissão que fica na mesa. O seu cliente já está esperando um vendedor que saiba ajudá-lo de verdade.
+    </p>
+    <div class="cta-wrap">
+      <a onclick="abrirPopup(); return false;" href="#" class="btn-cta" style="font-size:19px; padding:22px 52px;">
+        Quero Vender Mais Agora — 5x de R$41
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <div class="cta-sub">🔒 Pagamento seguro &nbsp;·&nbsp; <strong>Acesso imediato</strong> &nbsp;·&nbsp; 7 dias de garantia</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Vendedor 2026 · Todos os direitos reservados · Curso disponível na plataforma Hotmart</p>
+  <p style="margin-top:8px;">
+    <a href="#">Política de Privacidade</a> &nbsp;·&nbsp; <a href="#">Termos de Uso</a>
+  </p>
+</footer>
+
+<!-- POPUP LEAD CAPTURE -->
+<div id="popup-overlay" class="popup-overlay" onclick="fecharPopup(event)">
+  <div class="popup-box">
+    <button class="popup-close" onclick="fecharPopup(null, true)">✕</button>
+    <div class="popup-icon">🎯</div>
+    <h3>Só mais um passo para começar</h3>
+    <p>Preencha abaixo e acesse agora a página de compra com todas as condições especiais.</p>
+    <form id="popup-form" onsubmit="enviarLead(event)">
+      <div class="popup-field">
+        <label for="lead-nome">Seu nome</label>
+        <input type="text" id="lead-nome" placeholder="Como você se chama?" required autocomplete="given-name" />
+      </div>
+      <div class="popup-field">
+        <label for="lead-wpp">WhatsApp</label>
+        <input type="tel" id="lead-wpp" placeholder="(11) 99999-9999" required autocomplete="tel" />
+      </div>
+      <button type="submit" class="btn-cta" style="width:100%; margin-top:8px;">
+        Quero Garantir Minha Vaga
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p class="popup-privacy">🔒 Seus dados estão seguros. Não enviamos spam.</p>
+    </form>
+  </div>
+</div>
+
+<!-- STICKY CTA MOBILE -->
+<div class="sticky-cta">
+  <div class="sticky-price">
+    <small>De R$ 489</small>
+    5x R$41
+  </div>
+  <a onclick="abrirPopup(); return false;" href="#" class="btn-sticky">Garantir Agora</a>
+</div>
+
+<script>
+  function setToggle(tipo) {
+    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.toggle-panel').forEach(p => p.classList.add('hidden'));
+    document.querySelector('[onclick="setToggle(\'' + tipo + '\')"]').classList.add('active');
+    document.getElementById('panel-' + tipo).classList.remove('hidden');
+  }
+
+  function abrirPopup() {
+    document.getElementById('popup-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fecharPopup(e, forcar) {
+    if (forcar || (e && e.target === document.getElementById('popup-overlay'))) {
+      document.getElementById('popup-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  const SUPA_URL = 'https://pexenzdlbfgpaunsugek.supabase.co';
+  const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBleGVuemRsYmZncGF1bnN1Z2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1OTQ1MjQsImV4cCI6MjA5NjE3MDUyNH0.92F_Um7tVt17qpggms-Fo_BHBG15vS-YfCWdfWe4v2Q';
+
+  async function enviarLead(e) {
+    e.preventDefault();
+    const nome = document.getElementById('lead-nome').value.trim();
+    const wpp  = document.getElementById('lead-wpp').value.trim();
+
+    localStorage.setItem('lead_nome', nome);
+    localStorage.setItem('lead_wpp', wpp);
+
+    // Salva no Supabase (fire-and-forget — não bloqueia o redirect)
+    fetch(SUPA_URL + '/rest/v1/leads?schema=topvendas', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPA_KEY,
+        'Authorization': 'Bearer ' + SUPA_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ nome, whatsapp: wpp, origem: 'landing_page' })
+    }).catch(() => {}); // silencia erros de rede
+
+    window.location.href = 'checkout.html';
+  }
+
+  // Máscara telefone
+  document.addEventListener('DOMContentLoaded', function() {
+    const tel = document.getElementById('lead-wpp');
+    if (tel) {
+      tel.addEventListener('input', function() {
+        let v = this.value.replace(/\D/g, '').slice(0, 11);
+        if (v.length > 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+        else if (v.length > 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+        else if (v.length > 0) v = '(' + v;
+        this.value = v;
+      });
+    }
+  });
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Highlight CTA on scroll
+  const cta = document.querySelector('.sticky-cta');
+  window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    cta.style.display = heroBottom < 0 ? 'flex' : 'none';
+  });
+</script>
+</body>
+</html>
