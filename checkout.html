@@ -106,8 +106,9 @@
     .hotmart-embed-wrap iframe {
       display: block;
       width: 100%;
-      min-height: 700px;
+      height: 900px;
       border: none;
+      transition: height .2s ease;
     }
     .cta-meta {
       text-align: center;
@@ -326,6 +327,22 @@
 </footer>
 
 <script>
+  // Auto-resize iframe via postMessage da Hotmart
+  window.addEventListener('message', function(e) {
+    if (!e.origin.includes('hotmart.com')) return;
+    var iframe = document.querySelector('.hotmart-embed-wrap iframe');
+    if (!iframe) return;
+    var h = null;
+    if (e.data && typeof e.data === 'object') {
+      h = e.data.height || e.data.scrollHeight || e.data.innerHeight || null;
+    } else if (typeof e.data === 'number') {
+      h = e.data;
+    } else if (typeof e.data === 'string') {
+      try { var d = JSON.parse(e.data); h = d.height || d.scrollHeight || null; } catch(err) {}
+    }
+    if (h && h > 400) iframe.style.height = (h + 40) + 'px';
+  });
+
   // Personaliza com nome do lead
   const nome = localStorage.getItem('lead_nome');
   if (nome) {
