@@ -1711,12 +1711,14 @@
     localStorage.setItem('lead_wpp', wpp);
 
     // Salva no Supabase (fire-and-forget — não bloqueia o redirect)
-    fetch(SUPA_URL + '/rest/v1/leads?schema=topvendas', {
+    fetch(SUPA_URL + '/rest/v1/leads', {
       method: 'POST',
       headers: {
         'apikey': SUPA_KEY,
         'Authorization': 'Bearer ' + SUPA_KEY,
         'Content-Type': 'application/json',
+        'Accept-Profile': 'topvendas',
+        'Content-Profile': 'topvendas',
         'Prefer': 'return=minimal'
       },
       body: JSON.stringify({ nome, whatsapp: wpp, origem: 'landing_page' })
